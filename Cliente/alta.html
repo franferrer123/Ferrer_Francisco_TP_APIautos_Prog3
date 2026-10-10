@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion autos - Agregar</title>
+    <script src="../Cliente/alta.js"></script>
+    <link rel="icon" type="image/png" href="../Cliente/auto.png">
+    <link rel="stylesheet" href="../Cliente/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Cliente/estilos.css" type="text/css">
+</head>
+<body>
+        <h1>SISTEMA DE AUTOMOVILES</h1>
+    <p class="descripcion">Formulario para dar de alta un nuevo vehiculo en el sistema.</p>    
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="consulta.html">CONSULTAR</a>
+        <a href="alta.html" class="activo">AGREGAR</a>
+        <a href="modificar.html">MODIFICAR</a>
+        <a href="eliminar.html">ELIMINAR</a>
+    </nav>
+    <div id="mensajeAPI" class="mensaje"></div>
+    <form id="formularioAlta">
+        <div class="container">
+            <label for="idAuto">ID (Opcional):</label>
+            <input type="number" id="idAuto" min="1" placeholder="Vacio para ID automatico">
+        </div>
+        <div class="container">
+            <label for="autoMarca">Marca:</label>
+            <input type="text" id="autoMarca" required placeholder="Ej: Honda">
+        </div>
+        <div class="container">
+            <label for="autoPrecio">Precio:</label>
+            <input type="number" id="autoPrecio" min="1" required placeholder="Ej: 32000">
+        </div>
+        <div class="container">
+            <label for="autoColor">Color:</label>
+            <!-- clase nativa de bootstrap -->
+            <input type="color" id="autoColor" value="#ffffff" style="border: none; background: none; width: 100%; height: 40px;">
+        </div>
+        <!-- clases de boton de bootstrap -->
+        <button type="submit" id="btnguardar" class="btn btn-primary fw-bold">Agregar Auto</button>
+    </form>
+    <script src="../Cliente/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

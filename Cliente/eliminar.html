@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion autos - Eliminar</title>
+    <script src="../Cliente/eliminar.js"></script>
+    <link rel="icon" type="image/png" href="../Cliente/auto.png">
+    <link rel="stylesheet" href="../Cliente/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Cliente/estilos.css" type="text/css">
+</head>
+<body>
+        <h1>SISTEMA DE AUTOMOVILES</h1>
+    <p class="descripcion">Eliminar un vehiculo de forma permanente de la base de datos.</p>
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="consulta.html">CONSULTAR</a>
+        <a href="alta.html">AGREGAR</a>
+        <a href="modificar.html">MODIFICAR</a>
+        <a href="eliminar.html" class="activo">ELIMINAR</a>
+    </nav>
+    <div id="mensajeAPI" class="mensaje"></div>
+    <form id="formularioEliminar">
+        <div class="container">
+            <label for="idEliminar">ID del Auto:</label>
+            <input type="number" id="idEliminar" min="1" required placeholder="Ingrese ID a borrar">
+        </div>
+        <!-- Boton de alerta con bootstrap -->
+        <button type="submit" class="btn btn-danger fw-bold">Eliminar Vehiculo</button>
+    </form>
+    <script src="../Cliente/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion autos - Modificar</title>
+    <script src="../Cliente/modificar.js"></script>
+    <link rel="icon" type="image/png" href="../Cliente/auto.png">
+    <link rel="stylesheet" href="../Cliente/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Cliente/estilos.css" type="text/css">
+</head>
+<body>
+        <h1>SISTEMA DE AUTOMOVILES</h1>
+    <p class="descripcion">Busque un vehiculo por su ID para actualizar sus datos en la base de datos.</p>
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="consulta.html">CONSULTAR</a>
+        <a href="alta.html">AGREGAR</a>
+        <a href="modificar.html" class="activo">MODIFICAR</a>
+        <a href="eliminar.html">ELIMINAR</a>
+    </nav>
+    <div id="mensajeAPI" class="mensaje"></div>
+    <!-- Buscar el auto para modificar -->
+    <form id="formularioBuscarModificar">
+        <div class="container">
+            <label for="idModificar">ID del Auto:</label>
+            <input type="number" id="idModificar" min="1" required placeholder="Ingrese ID a editar">
+        </div>
+        <!-- Boton azul usando bootstrap -->
+        <button type="submit" class="btn btn-primary fw-bold">Obtener Datos</button>
+    </form>
+    <!-- Formulario de edicion (Se habilita al encontrar el auto) -->
+    <form id="formularioEdicion" style="display: none;">
+        <div class="container">
+            <label for="editId">ID (No modificable):</label>
+            <input type="number" id="editId" disabled>
+        </div>
+        <div class="container">
+            <label for="editMarca">Marca:</label>
+            <input type="text" id="editMarca" required>
+        </div>
+        <div class="container">
+            <label for="editPrecio">Precio:</label>
+            <input type="number" id="editPrecio" min="1" required>
+        </div>
+        <div class="container">
+            <label for="editColor">Color:</label>
+            <input type="color" id="editColor">
+        </div>
+        <!-- Boton verde usando bootstrap -->
+        <button type="submit" id="btnguardar" class="btn btn-succes fw-bold">Confirmar Modificacion</button>
+    </form>
+    <script src="../Cliente/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

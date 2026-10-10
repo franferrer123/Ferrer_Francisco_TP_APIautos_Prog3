@@ -1,0 +1,223 @@
+{
+  "info": {
+    "_postman_id": "b15a1bde-a570-4410-82aa-43f8d4d60ecf",
+    "name": "API autos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58344920"
+  },
+  "item": [
+    {
+      "name": "Consultas",
+      "item": [
+        {
+          "name": "Obtener todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api-autos-tgwd.onrender.com/autos",
+              "protocol": "https",
+              "host": [
+                "api-autos-tgwd",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "autos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener por ID",
+          "request": {
+            "auth": {
+              "type": "inherit"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api-autos-tgwd.onrender.com/autos/1",
+              "protocol": "https",
+              "host": [
+                "api-autos-tgwd",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "autos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ID inexistente",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Alta",
+      "item": [
+        {
+          "name": "Crear por ID manualmente",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 997,\r\n  \"marca\": \"Toyota Yaris\",\r\n  \"precio\": 35000,\r\n  \"color\": \"#FF0000\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api-autos-tgwd.onrender.com/autos",
+              "protocol": "https",
+              "host": [
+                "api-autos-tgwd",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "autos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Error de ID existente",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 1,\r\n  \"marca\": \"Honda civic\",\r\n  \"precio\": 30000,\r\n  \"color\": \"#0000FF\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api-autos-tgwd.onrender.com/autos",
+              "protocol": "https",
+              "host": [
+                "api-autos-tgwd",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "autos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear por ID automatico",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"marca\": \"Ford Mustang\",\r\n  \"precio\": 95000,\r\n  \"color\": \"#00AA00\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api-autos-tgwd.onrender.com/autos",
+              "protocol": "https",
+              "host": [
+                "api-autos-tgwd",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "autos"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Modificar",
+      "item": [
+        {
+          "name": "Modificar auto",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"marca\": \"Toyota Supra Modificado\",\r\n  \"precio\": 80000,\r\n  \"color\": \"#FFFF00\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api-autos-tgwd.onrender.com/autos/100",
+              "protocol": "https",
+              "host": [
+                "api-autos-tgwd",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "autos",
+                "100"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Eliminar",
+      "item": [
+        {
+          "name": "Eliminar auto",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://api-autos-tgwd.onrender.com/autos/997",
+              "protocol": "https",
+              "host": [
+                "api-autos-tgwd",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "autos",
+                "997"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion autos - Consultar</title>
+    <script src="../Cliente/consulta.js"></script>
+    <link rel="icon" type="image/png" href="../Cliente/auto.png">
+    <link rel="stylesheet" href="../Cliente/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Cliente/estilos.css" type="text/css">
+</head>
+<body>
+    <h1>SISTEMA DE AUTOMOVILES</h1>
+    <p class="descripcion">Listado completo de vehiculos y busqueda individual por ID.</p>
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="consulta.html" class="activo">CONSULTAR</a>
+        <a href="alta.html">AGREGAR</a>
+        <a href="modificar.html">MODIFICAR</a>
+        <a href="eliminar.html">ELIMINAR</a>
+    </nav>
+    <!-- Contenedor para mensajes de exito o error -->
+    <div id="mensajeAPI" class="mensaje"></div>
+    <!-- Formulario para consulta individual -->
+    <form id="formularioBusqueda">
+        <legend style="font-weight: bold; margin-bottom: 10px; color: #3b82f6;">Consulta Individual</legend>
+        <div class="container">
+            <label for="buscarId">ID del Auto:</label>
+            <input type="number" id="buscarId" min="1" required placeholder="Ej: 15">
+        </div>
+        <button type="submit" class="btn btn-primary fw-bold">Buscar Auto</button>
+    </form>
+    <!-- Espacio donde se inyecta la tabla de forma dinamica (bootstrap)-->
+    <div id="contenedortabla" class="table-responsive"></div>
+    <link rel="stylesheet" href="../Cliente/bootstrap/js/bootstrap.bundle.min.js">
+</body>
+</html>

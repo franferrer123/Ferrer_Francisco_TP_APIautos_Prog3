@@ -1,0 +1,124 @@
+/* General */
+* { /* (*) Selector universal */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #121824; /* Gris oscuro azulado de fondo */
+    color: #f8fafc;           /* Texto claro para excelente contraste */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 2.2rem;
+    text-align: center;
+}
+.descripcion {
+    color: #94a3b8; /* Gris intermedio para textos secundarios */
+    margin-bottom: 25px;
+    text-align: center;
+    max-width: 600px;
+}
+/* Menu unificado */
+nav {
+    width: 100%;
+    max-width: 900px;
+    background-color: #1e293b; /* Gris contenedor */
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+nav a:hover {
+    background-color: #334155;
+    color: #ffffff;
+}
+/* Clase para resaltar en que pagina esta parado el usuario */
+nav a.activo {
+    background-color: #2563eb; /* Enfoque tirando a profecional */
+    color: #ffffff;
+}
+/* Estructura de formulario y contenedores */
+form {
+    width: 100%;
+    max-width: 500px;
+    background-color: #1e293b; /* Vuelve tu gris contenedor original */
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+.container {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+label {
+    font-weight: 600;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+}
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #0f172a; 
+    border: 1px solid #475569;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #3b82f6; /* Foco azul */
+}
+input[type="color"] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    background: none;
+    cursor: pointer;
+}
+/* Mensaje de feedback (exito o error) */
+.mensaje {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+    display: none; /* Se muestra en JS */
+}
+.mensaje-exito {
+    background-color: #065f46;
+    color: #34d399;
+    border: 1px solid #047857;
+}
+.mensaje-error {
+    background-color: #991b1b;
+    color: #fca5a5;
+    border: 1px solid #b91c1c;
+}
